@@ -1,13 +1,18 @@
 import { Prisma, User } from "@prisma/client";
 import { prisma } from "../../config/db";
+import { generateToken } from "../../utils/jwtUtils";
+import { Response } from "express";
 
-const loginWithEmailAndPassword = async ({
-  email,
-  password,
-}: {
-  email: string;
-  password: string;
-}) => {
+const loginWithEmailAndPassword = async (
+  {
+    email,
+    password,
+  }: {
+    email: string;
+    password: string;
+  },
+  res: Response
+) => {
   const user = await prisma.user.findFirst({
     where: {
       email,
@@ -19,7 +24,13 @@ const loginWithEmailAndPassword = async ({
   }
 
   if (password === user.password) {
-    return user;
+    const token = generateToken(user?.id);
+    res.cookie("token", token, {
+      httpOnly: true, // Prevent JavaScript from accessing the cookie
+      secure: process.env.NODE_ENV === "production", // Only set the cookie over HTTPS in production
+      maxAge: 3600000, // 1 hour in milliseconds
+    });
+    return { ...user, token };
   } else {
     throw new Error("INCORRECT PASSWORD");
   }

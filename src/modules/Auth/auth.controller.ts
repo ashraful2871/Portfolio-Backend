@@ -3,7 +3,7 @@ import { authService } from "./auth.service";
 
 const loginWithEmailAndPassword = async (req: Request, res: Response) => {
   try {
-    const result = await authService.loginWithEmailAndPassword(req.body);
+    const result = await authService.loginWithEmailAndPassword(req.body, res);
     res.status(201).json(result);
   } catch (error) {
     res.status(500).json(error);
