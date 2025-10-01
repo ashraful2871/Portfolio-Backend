@@ -1,9 +1,28 @@
 import { Prisma, User } from "@prisma/client";
-import { Request, Response } from "express";
 import { prisma } from "../../config/db";
 
-const loginWithEmailAndPassword = (req: Request, res: Response) => {
-  return {};
+const loginWithEmailAndPassword = async ({
+  email,
+  password,
+}: {
+  email: string;
+  password: string;
+}) => {
+  const user = await prisma.user.findFirst({
+    where: {
+      email,
+    },
+  });
+
+  if (!user) {
+    throw new Error("user not found");
+  }
+
+  if (password === user.password) {
+    return user;
+  } else {
+    throw new Error("INCORRECT PASSWORD");
+  }
 };
 
 const register = async (payload: Prisma.UserCreateInput): Promise<User> => {
