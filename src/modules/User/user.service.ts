@@ -1,7 +1,21 @@
-import { Request, Response } from "express";
+import { prisma } from "../../config/db";
 
-const register = async (req: Request, res: Response) => {
-  return {};
+const getAllUser = async () => {
+  const result = await prisma.user.findMany({
+    select: {
+      id: true,
+      name: true,
+      email: true,
+      photo: true,
+      phone: true,
+      createdAt: true,
+      updatedAt: true,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+  return result;
 };
 
-export const userService = { register };
+export const userService = { getAllUser };

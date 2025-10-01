@@ -1,12 +1,17 @@
 import cors from "cors";
 import express from "express";
 import compression from "compression";
+import { authRoute } from "./modules/Auth/auth.route";
+import { userRoute } from "./modules/User/user.route";
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(compression());
 app.use(express.json());
+
+app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/user", userRoute);
 
 // Default route for testing
 app.get("/", (_req, res) => {

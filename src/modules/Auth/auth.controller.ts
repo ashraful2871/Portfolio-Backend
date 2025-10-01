@@ -1,11 +1,17 @@
 import { Request, Response } from "express";
+import { authService } from "./auth.service";
 
 const loginWithEmailAndPassword = (req: Request, res: Response) => {
   return {};
 };
 
 const register = async (req: Request, res: Response) => {
-  return {};
+  try {
+    const result = await authService.register(req.body);
+    res.status(201).json(result);
+  } catch (error) {
+    res.status(500).json(error);
+  }
 };
 
 export const authController = { loginWithEmailAndPassword, register };
