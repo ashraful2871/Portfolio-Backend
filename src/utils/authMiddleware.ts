@@ -21,10 +21,12 @@ const authMiddleware = async (
   }
 
   try {
-    const decoded = verifyToken(token);
+    const decoded = await verifyToken(token);
+    console.log(decoded);
     req.user = decoded;
     next();
   } catch (error) {
+    console.log(error);
     return res.status(401).json({ message: "Invalid or expired token" });
   }
 };

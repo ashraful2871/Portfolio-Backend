@@ -25,11 +25,8 @@ const loginWithEmailAndPassword = async (
 
   if (password === user.password) {
     const token = generateToken(user?.id);
-    res.cookie("token", token, {
-      httpOnly: true, // Prevent JavaScript from accessing the cookie
-      secure: process.env.NODE_ENV === "production", // Only set the cookie over HTTPS in production
-      maxAge: 3600000, // 1 hour in milliseconds
-    });
+    res.cookie("token", token, { httpOnly: true, secure: true }); // Set token as a cookie
+    res.status(200).json({ message: "Logged in successfully" });
     return { ...user, token };
   } else {
     throw new Error("INCORRECT PASSWORD");
