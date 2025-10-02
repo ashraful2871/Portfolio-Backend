@@ -7,7 +7,25 @@ const createBlog = async (payload: Prisma.BlogCreateInput) => {
   });
   return blog;
 };
+const getAllBlogs = async () => {
+  const blog = await prisma.blog.findMany({
+    select: {
+      id: true,
+      title: true,
+      content: true,
+      user: true,
+      userId: true,
+      createdAt: true,
+      updatedAt: true,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+  return blog;
+};
 
 export const blogService = {
   createBlog,
+  getAllBlogs,
 };
