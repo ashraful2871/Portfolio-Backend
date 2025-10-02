@@ -27,10 +27,14 @@ CREATE TABLE "Blog" (
 -- CreateTable
 CREATE TABLE "Project" (
     "id" SERIAL NOT NULL,
-    "title" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "image" TEXT NOT NULL,
+    "techStack" TEXT NOT NULL,
+    "myContribution" TEXT,
     "description" TEXT NOT NULL,
-    "link" TEXT NOT NULL,
-    "userId" INTEGER NOT NULL,
+    "liveLink" TEXT NOT NULL,
+    "githubLink" TEXT NOT NULL,
+    "challenges" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
@@ -42,6 +46,3 @@ CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- AddForeignKey
 ALTER TABLE "Blog" ADD CONSTRAINT "Blog_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "Project" ADD CONSTRAINT "Project_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
