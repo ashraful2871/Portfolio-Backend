@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import { authRoute } from "./modules/Auth/auth.route";
 import { userRoute } from "./modules/User/user.route";
 import { blogRoute } from "./modules/Blog/blog.route";
+import { projectRoute } from "./modules/project/project.route";
 const app = express();
 
 // Middleware
@@ -16,6 +17,7 @@ app.use(cookieParser());
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/blog", blogRoute);
+app.use("/api/v1/project", projectRoute);
 
 // Default route for testing
 app.get("/", (_req, res) => {

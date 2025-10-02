@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Agro Mart (Team Project)",
+    "image": "https://i.ibb.co.com/Wv6Jyh0h/Green-and-White-Organic-Agriculture-Business-You-Tube-Thumbnail.png",
+    "techStack": "React, JavaScript, Node.js, Express.js, MongoDB, Tailwind CSS, Redux",
+    "description": "AgroMart is an e-commerce platform connecting farmers directly with consumers, businesses, and industrial buyers. It enables farmers to list and manage agricultural products, process orders, and integrate secure payments while providing customers with fresh produce, cart and wishlist management, and AI-driven crop disease detection. Features include multi-language support, weather-based crop advice, and a responsive interface for seamless access across devices.",
+    "myContribution": "In the AgroMart project, an e-commerce platform designed to connect farmers directly with consumers, I made significant contributions across frontend, backend, and project management, ensuring a robust and user-friendly application. I initiated the project by setting up a collaborative environment using Trello, where I organized sprint tasks and added the project manager as an admin for oversight, and established a GitHub repository, inviting team members as contributors to streamline version control. I laid the foundation for the frontend by designing a responsive landing page with a navbar, footer, and a carefully selected logo, leveraging React and Tailwind CSS to align with AgroMart’s branding, and deployed the initial site to a live link for early testing. My frontend development extended to creating dynamic, interactive components, including product listings with filtering and sorting capabilities, and role-based dashboards for admins, farmers, and customers, displaying tailored data such as order histories and user lists, all optimized for seamless performance across PCs, laptops, tablets, and mobile devices. On the backend, I configured a Node.js and Express.js server, set up MongoDB with a team-oriented organization structure, and implemented secure JWT-based authentication, enabling users to create accounts and log in while supporting role-based access control. To enhance security, I developed an account lockout mechanism that temporarily disables login after three failed password attempts, with customizable lockout durations (e.g., 3 or 5 minutes), and integrated a fully functional password reset feature. I also implemented cart functionality, allowing users to add and purchase products, with complete frontend and backend integration for a smooth checkout experience. A key feature I delivered was the admin dashboard, which included dynamic visualizations like a line chart for weekly sales trends and a circle chart for best-selling products, providing actionable insights for site management. I further enhanced the platform by implementing multi-language support across all dashboards (admin, farmer, customer), ensuring accessibility for diverse users. To ensure reliability, I explored unit testing, writing test cases and assertions to verify component behavior. Throughout the project, I polished the UI by resolving color conflicts in the light/dark mode toggle, standardizing the Tailwind CSS theme, removing dummy text, and eliminating unClickable buttons, while rigorously optimizing responsiveness to deliver a consistent experience across devices. My contributions also included integrating Redux for streamlined authentication management, which improved the scalability of role-based features. By addressing technical challenges like coordinating team workflows, managing complex role-based data displays, and ensuring cross-device compatibility, I helped deliver a polished, secure, and innovative platform that empowers farmers and consumers alike.",
+    "liveLink": "https://agro-mart-e2cb4.web.app",
+    "githubLink": "https://github.com/ashraful2871/Agro-Mart",
+    "challenges": "During AgroMart's development, I faced challenges in setting up a collaborative team environment, which I addressed by configuring Trello for project management and GitHub for version control, ensuring smooth team coordination. I implementing authentication system using Redux to manage user roles and display relevant data this is totally new for me. Additionally, integrating the AI Crop Doctor feature required handling image uploads and API responses, which I and my team resolved by creating a reusable component to process and display disease detection results efficiently. And also faced issues when i and we implementing the multi language features and multi currency features for buy products"
+  },
+
+  {
+    "name": "Collaborative Study",
+    "image": "https://i.ibb.co.com/8DrzwJQr/Blue-Welcome-to-School-Library-Banner-1.png",
+    "techStack": " React, JavaScript, MongoDB, Express Js, Node Js, Tailwind CSS, Local Storage",
+    "description": "The Collaborative Study Platform is designed to connect students, tutors, and administrators, providing tools to schedule study sessions, manage resources, and foster collaborative learning in a streamlined way.",
+    "liveLink": "https://collaborative-study-platform.web.app",
+    "githubLink": "https://github.com/ashraful2871/Collaborative-Study-Client",
+    "challenges": "While working on this project, I encountered a challenge in selecting user roles, as this task was entirely new to me. However, I successfully managed to implement it. Later, I faced another challenge when determining how to display data in the UI based on the user's role. To address this, I created a custom hook responsible for managing user roles. This hook ensures that data is displayed appropriately in the UI according to the user's role. As a result, users can view their respective data on their designated dashboards based on their roles."
+  },
+  {
+    "name": "Car Rent",
+    "image": "https://i.ibb.co.com/tPZ51SJm/car-rent.png",
+    "techStack": "React, Tailwind CSS, Node.js, MongoDB, Express",
+    "description": "A user-friendly platform for browsing, booking, and managing car rentals with real-time availability",
+    "liveLink": "https://car-rent-67bee.web.app",
+    "githubLink": "https://github.com/ashraful2871/Car-rental-client.git",
+    "challenges": "While working on this project, I faced some challenges implementing the banner section. It was my first time implementing a banner using a package; previously, I used DaisyUI for such tasks. As a result, it was a bit challenging for me. However, I was eventually able to implement it successfully."
+  },
+  {
+    "name": "Chill Gamer",
+    "image": "https://i.ibb.co.com/WW6Y9TPd/chill-gamer.png",
+    "techStack": "React, Tailwind CSS, Node.js, MongoDB, Express",
+    "description": "A platform for reviewing and rating video games, allowing users to share their experiences, read reviews, and discover new games based on ratings.",
+    "liveLink": "https://assignment-10-21f7d.web.app",
+    "githubLink": "https://github.com/ashraful2871/A10-Chhill-Gamer-Client",
+    "challenges": "While working on this project, I faced some challenges implementing animations as it was a completely new concept for me. Exploring and understanding the animations took some time, and the project deadline was approaching, which added to the pressure. However, I was able to implement them successfully in the end.\n\nAdditionally, I encountered issues while adding videos to the banner section. Initially, when I added the videos, I noticed that the mobile view struggled to load them due to their large size. To solve this, I explored various online platforms to learn how to convert videos into GIFs. After implementing this solution, the performance improved significantly. Despite the challenges, I was ultimately able to complete this project successfully."
+  },
+  {
+    "name": "Solo Sphere",
+    "image": "https://i.ibb.co.com/SDQbhs1V/solo-sphere.png",
+    "techStack": "React, Tailwind CSS, Node.js, MongoDB, Express",
+    "description": "A platform where anyone can post jobs, and anyone can apply for a job.",
+    "liveLink": "https://sholo-sharp.web.app",
+    "githubLink": "https://github.com/ashraful2871/Sholo-Sharp-client",
+    "challenges": "During this project, I faced several challenges, such as implementing JWT tokens and performing CRUD operations. When I first started implementing tokens, I got confused with the GET and POST methods. After exploring the documentation, I managed to fix the issue.\n\nHowever, after deploying the project, I realized that although the token was added after logging in, it wasn't removed after logging out. After much troubleshooting, I found that the issue was caused by the token being stored server-side with the POST method and client-side with the GET method. Once I fixed this, everything worked perfectly.\n\nI also faced some difficulties while working with CRUD operations, especially with changing the status. I had to figure out how to change the status when clicked, but after some effort, I was able to successfully implement it. In the end, I managed to resolve all the issues and complete the project successfully."
+  }
+]

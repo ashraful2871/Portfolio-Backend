@@ -23,7 +23,6 @@ model User {
   createdAt DateTime @default(now()) 
   updatedAt DateTime @updatedAt 
   blogs Blog[]
-  projects Project[]
 }
 
 model Blog{
@@ -37,13 +36,16 @@ model Blog{
 }
 model Project{
   id Int @id @default(autoincrement())
-  title String
+  name String
+  image String
+  techStack String
+  myContribution String?
   description String
-  link String
-  userId Int
+  liveLink String
+  githubLink String
+  challenges String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  user User @relation(fields: [userId], references: [id])
 }
 
 
