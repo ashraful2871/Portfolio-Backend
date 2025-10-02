@@ -3,8 +3,7 @@ import { blogService } from "./blog.service";
 
 const createBlog = async (req: Request, res: Response) => {
   try {
-    const userId = req.user?.userId; // Make sure userId exists in req.user
-    console.log(userId); // Log the userId to see if it's correctly populated
+    const userId = req.user?.userId;
     if (!userId) {
       return res.status(400).json({ message: "User not authenticated" });
     }

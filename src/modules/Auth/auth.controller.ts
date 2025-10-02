@@ -4,9 +4,13 @@ import { authService } from "./auth.service";
 const loginWithEmailAndPassword = async (req: Request, res: Response) => {
   try {
     const result = await authService.loginWithEmailAndPassword(req.body, res);
-    res.status(201).json(result);
+    res.status(200).json(result);
   } catch (error) {
-    res.status(500).json(error);
+    res
+      .status(401)
+      .json({
+        message: error instanceof Error ? error.message : "Login failed",
+      });
   }
 };
 
