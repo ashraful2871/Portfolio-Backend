@@ -15,12 +15,8 @@ const createBlog = async (req: Request, res: Response) => {
 };
 const getAllBlogs = async (req: Request, res: Response) => {
   try {
-    const userId = req.user?.userId;
-    if (!userId) {
-      return res.status(400).json({ message: "User not authenticated" });
-    }
     const result = await blogService.getAllBlogs();
-    res.status(201).json(result);
+    res.status(200).json(result);
   } catch (error: any) {
     res.status(501).json(error);
   }

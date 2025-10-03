@@ -5,6 +5,6 @@ import authMiddleware from "../../utils/authMiddleware";
 const router = Router();
 
 router.post("/create-blog", authMiddleware, blogController.createBlog);
-router.get("/all-blogs", authMiddleware, blogController.getAllBlogs);
+router.get("/all-blogs", blogController.getAllBlogs);
 
 export const blogRoute = router;
