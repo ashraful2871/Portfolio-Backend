@@ -13,7 +13,15 @@ const getAllProjects = async () => {
   return projects;
 };
 
+const getSingleProject = async (id: string) => {
+  const project = await prisma.project.findUnique({
+    where: { id: Number(id) },
+  });
+  return project;
+};
+
 export const projectService = {
   createProject,
   getAllProjects,
+  getSingleProject,
 };
