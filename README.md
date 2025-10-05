@@ -104,7 +104,7 @@ backend/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/portfolio-backend.git
+gt clone https://github.com/ashraful2871/Portfolio-Backend.git
 cd portfolio-backend
 ```
 
